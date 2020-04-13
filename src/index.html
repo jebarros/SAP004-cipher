@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>Hello world!</h1>
-    </div>
-    <script src="index.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="container">
+        <div class="center">
+          <h1 class="titulo">Bem vindo Aventureiro!! </h1>
+
+          <div class="salution">
+            <h2>Utilize esta ferramenta para para trocar mensagens entre sua guilda (clã) com outras. </h2>
+            <h3>É bem simples, basta escolher o numero do deslocamento das letras e escolher se quer Cifrar ou Decifrar.
+            </h3>
+          </div>
+
+          <div>
+            <h3>Informe o valor do deslocamento de 1 a 100: </h3>
+            <input id="deslocamento" type="number" min="1" max="100" value="1" />
+          </div>
+
+
+          <div>
+            <h3>Mensagem a ser Cifrada: </h3>
+            <textarea name="texto" id="mensagem" cols="55" rows="10" required></textarea>
+          </div>
+
+          <div>
+            <button id="cifrar">Cifrar</button>
+            <button id="decifrar">Decifrar</button>
+          </div>
+
+          <div>
+            <h3>Resultado</h3>
+            <textarea name="texto2" id="result" cols="55" rows="10" required></textarea>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="index.js" type="module"></script>
+</body>
+
 </html>
