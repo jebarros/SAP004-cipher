@@ -27,7 +27,7 @@ describe('cipher', () => {
     });
 
     // Hacker edition
-   
+
     // [Português]
     // Se quiser adicionar testes para letras minúsculas, descomente o teste
     // abaixo.
@@ -65,7 +65,7 @@ describe('cipher', () => {
     });
 
     // Hacker edition
-    
+
     // [Português]
     // Se quiser adicionar testes para letras minúsculas, descomente o teste
     // abaixo.
