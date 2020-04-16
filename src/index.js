@@ -3,20 +3,23 @@ import cipher from './cipher.js';
 const botaoCifra = document.getElementById("cifrar")
 const botaoDecifra = document.getElementById("decifrar")
 
-botaoCifra.addEventListener("click", function () {
+botaoCifra.addEventListener("click", function (event) {
+  event.preventDefault();
   let mensagem = document.getElementById("mensagem").value;
-  let deslocamento = document.getElementById("deslocamento").value;
-  deslocamento = parseInt(deslocamento);
+  let displacement = document.getElementById("displacement").value;
+  displacement = parseInt(displacement);
   mensagem = mensagem.toUpperCase();
-  document.getElementById("result").value = cipher.encode(deslocamento, mensagem);
+  document.getElementById("result").value = cipher.encode(displacement, mensagem);
+  
 
 
 });
 
-botaoDecifra.addEventListener("click", function() {
+botaoDecifra.addEventListener("click", function(event) {
+  event.preventDefault();
   let mensagem = document.getElementById("mensagem").value;
-  let deslocamento = document.getElementById("deslocamento").value;
-  deslocamento = parseInt(deslocamento);
+  let displacement = document.getElementById("displacement").value;
+  displacement = parseInt(displacement);
   mensagem = mensagem.toUpperCase();
-  document.getElementById("result").value = cipher.decode(deslocamento, mensagem);
+  document.getElementById("result").value = cipher.decode(displacement, mensagem);
 });

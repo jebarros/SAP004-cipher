@@ -1,8 +1,8 @@
 const cipher = {
-  encode: function (deslocamento, mensagem) {
+  encode: function (displacement, mensagem) {
 
 
-    if (typeof deslocamento !== 'number') {
+    if (typeof displacement !== 'number') {
       throw TypeError("Não confere")
     }
 
@@ -16,7 +16,7 @@ const cipher = {
 
     for (i = 0; i < mensagem.length; i++) {
       let letra = mensagem.charCodeAt(i);
-      let ASC = ((letra - 65 + deslocamento) % 26) + 65;
+      let ASC = ((letra - 65 + displacement) % 26) + 65;
 
       xuxu += String.fromCharCode(ASC);
     }
@@ -25,13 +25,13 @@ const cipher = {
   },
 
 
-  decode: function (deslocamento, mensagem) {
+  decode: function (displacement, mensagem) {
     let jaca = "";
     let i
 
     for (i = 0; i < mensagem.length; i++) {
       let letra = mensagem.charCodeAt(i);
-      let ASC = ((letra - 90 - deslocamento) % 26) + 90;
+      let ASC = ((letra - 90 - displacement) % 26) + 90;
       jaca += String.fromCharCode(ASC)
     }
 

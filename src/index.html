@@ -12,35 +12,40 @@
     <section>
       <div class="container">
         <div class="center">
-          <h1 class="titulo">Bem vindo Aventureiro!! </h1>
+          <form action="">
+            <h1 class="title">Bem vindo Aventureiro!! </h1>
 
-          <div class="salution">
-            <h2>Utilize esta ferramenta para para trocar mensagens entre sua guilda (clã) com outras. </h2>
-            <h3>É bem simples, basta escolher o numero do deslocamento das letras e escolher se quer Cifrar ou Decifrar.
-            </h3>
-          </div>
+            <div class="salution">
+              <h2>Utilize esta ferramenta para para trocar mensagens entre sua guilda (clã) com outras. </h2>
+              <h3>É bem simples, basta escolher o numero do deslocamento das letras e escolher se quer Cifrar ou
+                Decifrar.
+              </h3>
+            </div>
 
-          <div>
-            <h3>Informe o valor do deslocamento de 1 a 100: </h3>
-            <input id="deslocamento" type="number" min="1" max="100" value="1" />
-          </div>
+            <div>
+              <h3>Informe o valor do deslocamento de 1 a 100: </h3>
+              <label class="deslo" for="displacement">Deslocamento</label>
+              <input class="deslo" type="number" min="1" max="100" value="1" id="displacement" />
+            </div>
 
 
-          <div>
-            <h3>Mensagem a ser Cifrada: </h3>
-            <textarea name="texto" id="mensagem" cols="55" rows="10" required></textarea>
-          </div>
+            <div>
+              <label class="msg" for="mensagem">Mensagem a ser Cifrada:</label>
+              <textarea class="msg" name="texto" id="mensagem" cols="55" rows="10" required
+                placeholder="Digite aqui sua mensagem"></textarea>
+            </div>
 
-          <div>
-            <button id="cifrar">Cifrar</button>
-            <button id="decifrar">Decifrar</button>
-          </div>
+            <div>
+              <button class="cif" id="cifrar">Cifrar</button>
+              <button class="dec" id="decifrar">Decifrar</button>
+            </div>
 
-          <div>
-            <h3>Resultado</h3>
-            <textarea name="texto2" id="result" cols="55" rows="10" required></textarea>
-          </div>
-
+            <div>
+              <label class="result" for="result">Resultado</label>
+              <textarea class="result" name="texto2" id="result" cols="55" rows="10" required
+                placeholder="Resultado da sua mensagem"></textarea>
+            </div>
+          </form>
         </div>
       </div>
     </section>
