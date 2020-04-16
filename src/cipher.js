@@ -1,41 +1,51 @@
 const cipher = {
-  encode: function (displacement, mensagem) {
+  encode: function (displacement, message) {
 
 
     if (typeof displacement !== 'number') {
       throw TypeError("Não confere")
     }
 
-    if (typeof mensagem !== 'string') {
+    if (typeof message !== 'string') {
       throw TypeError ("Não confere")
     }
 
 
-    let xuxu = "";
+    let encode = "";
     let i;
 
-    for (i = 0; i < mensagem.length; i++) {
-      let letra = mensagem.charCodeAt(i);
-      let ASC = ((letra - 65 + displacement) % 26) + 65;
+    for (i = 0; i <message.length; i++) {
+      let letter = message.charCodeAt(i);
+      let ASC = ((letter - 65 + displacement) % 26) + 65;
 
-      xuxu += String.fromCharCode(ASC);
+      encode += String.fromCharCode(ASC);
     }
 
-    return xuxu
+    return encode
   },
 
 
-  decode: function (displacement, mensagem) {
-    let jaca = "";
-    let i
+  decode: function (displacement, message) {
 
-    for (i = 0; i < mensagem.length; i++) {
-      let letra = mensagem.charCodeAt(i);
-      let ASC = ((letra - 90 - displacement) % 26) + 90;
-      jaca += String.fromCharCode(ASC)
+    if (typeof displacement !== 'number') {
+      throw TypeError("Não confere")
     }
 
-    return jaca
+    if (typeof message !== 'string') {
+      throw TypeError ("Não confere")
+    }
+
+
+    let decode = "";
+    let i
+
+    for (i = 0; i < message.length; i++) {
+      let letter = message.charCodeAt(i);
+      let ASC = ((letter - 90 - displacement) % 26) + 90;
+      decode += String.fromCharCode(ASC)
+    }
+
+    return decode
 
   }
 

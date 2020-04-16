@@ -1,25 +1,25 @@
 import cipher from './cipher.js';
 
-const botaoCifra = document.getElementById("cifrar")
-const botaoDecifra = document.getElementById("decifrar")
+const encryptbutton = document.getElementById("encrypt")
+const decipherbutton = document.getElementById("decipher")
 
-botaoCifra.addEventListener("click", function (event) {
+encryptbutton.addEventListener("click", function (event) {
   event.preventDefault();
-  let mensagem = document.getElementById("mensagem").value;
+  let message = document.getElementById("message").value;
   let displacement = document.getElementById("displacement").value;
   displacement = parseInt(displacement);
-  mensagem = mensagem.toUpperCase();
-  document.getElementById("result").value = cipher.encode(displacement, mensagem);
+  message = message.toUpperCase();
+  document.getElementById("result").value = cipher.encode(displacement, message);
   
 
 
 });
 
-botaoDecifra.addEventListener("click", function(event) {
+decipherbutton.addEventListener("click", function(event) {
   event.preventDefault();
-  let mensagem = document.getElementById("mensagem").value;
+  let message = document.getElementById("message").value;
   let displacement = document.getElementById("displacement").value;
   displacement = parseInt(displacement);
-  mensagem = mensagem.toUpperCase();
-  document.getElementById("result").value = cipher.decode(displacement, mensagem);
+  message = message.toUpperCase();
+  document.getElementById("result").value = cipher.decode(displacement, message);
 });
