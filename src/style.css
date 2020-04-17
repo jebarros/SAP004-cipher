@@ -58,6 +58,10 @@ font-size: 16px;
   font-size: 16px;
   padding-top: inherit;
   width: 70px;
+  color: #ffffff;
+  background-color: #ff8888;
+  border-radius: 15%;
+  box-shadow: #000000;
 }
 
 .dec{
@@ -65,6 +69,10 @@ font-size: 16px;
   font-size: 16px;
   padding-top: inherit;
   width: 80px;
+  color: #ffffff;
+  background-color: #ff8888;
+  border-radius: 15%;
+  box-shadow: #000000;
 }
 
 .fix{
@@ -72,4 +80,8 @@ font-size: 16px;
   font-size: 16px;
   padding-top: inherit;
   width: 80px;
+  color: #ffffff;
+  background-color: #ff8888;
+  border-radius: 15%;
+  box-shadow: #000000;
 }
